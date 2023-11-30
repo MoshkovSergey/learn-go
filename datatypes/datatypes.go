@@ -5,13 +5,16 @@ import (
 	"reflect"
 )
 
-var pl = fmt.Println
+// printTypeAndValue prints the type and value of the given input.
+func printTypeAndValue(input interface{}) {
+	fmt.Printf("Type: %s, Value: %v\n", reflect.TypeOf(input), input)
+}
 
 func main() {
-	pl(reflect.TypeOf(25))
-	pl(reflect.TypeOf(3.14))
-	pl(reflect.TypeOf("hello"))
-	pl(reflect.TypeOf(true))
-	pl(reflect.TypeOf('a'))
-	pl(reflect.TypeOf(3 + 4i))
+	printTypeAndValue(25)      // Type: int, Value: 25
+	printTypeAndValue(3.14)    // Type: float64, Value: 3.14
+	printTypeAndValue("hello") // Type: string, Value: hello
+	printTypeAndValue(true)    // Type: bool, Value: true
+	printTypeAndValue('a')     // Type: int32, Value: 97
+	printTypeAndValue(3 + 4i)  // Type: complex128, Value: (3+4i)
 }
