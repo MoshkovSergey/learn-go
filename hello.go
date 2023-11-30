@@ -2,10 +2,14 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
+	"reflect"
 )
 
+
+var p = fmt.Println
 // pl prints a string to the console
 func pl(s string) {
 	println(s)
@@ -22,8 +26,11 @@ func greetUser() {
 	}
 
 	pl("Hello, " + name)
+	pl(reflect.TypeOf(pl).String())
+
 }
 
 func main() {
 	greetUser()
+	
 }
