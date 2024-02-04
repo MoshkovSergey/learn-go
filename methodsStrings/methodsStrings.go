@@ -14,6 +14,7 @@ var (
 
 func main() {
 	compareStrings()
+	containStrings()
 }
 
 // compareStrings compares the specified names by length and outputs the result
@@ -31,4 +32,9 @@ func compareStrings() {
 	fmt.Println(strings.Compare(name, name))
 }
 
-
+// containNames checks if the name contains certain letters
+func containStrings()  {
+	fmt.Println(strings.Contains(name, "e"))
+	fmt.Println(strings.Contains(name, "y"))
+	fmt.Println(strings.Contains(name, "z"))
+}
