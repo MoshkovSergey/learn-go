@@ -8,13 +8,14 @@ import (
 var (
 	name      string = "Sergey"
 	lastName  string = "Moshkov"
-	age       int    = 30
-	isMarried bool   = false
+	// age       int    = 30
+	// isMarried bool   = false
 )
 
 func main() {
 	compareStrings()
 	containStrings()
+	ReplaceStrings("Sergey")
 }
 
 // compareStrings compares the specified names by length and outputs the result
@@ -37,4 +38,8 @@ func containStrings()  {
 	fmt.Println(strings.Contains(name, "e"))
 	fmt.Println(strings.Contains(name, "y"))
 	fmt.Println(strings.Contains(name, "z"))
+}
+
+func ReplaceStrings(name string)  {
+	fmt.Println(strings.Replace(name, "S", "l", 1))
 }
